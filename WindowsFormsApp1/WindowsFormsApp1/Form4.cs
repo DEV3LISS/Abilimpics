@@ -33,5 +33,10 @@ namespace WindowsFormsApp1
             this.пользователи1TableAdapter.Fill(this.projectArazDataSet1.Пользователи1);
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

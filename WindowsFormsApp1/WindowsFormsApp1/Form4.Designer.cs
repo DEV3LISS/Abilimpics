@@ -74,7 +74,6 @@
             this.адресTextBox = new System.Windows.Forms.TextBox();
             this.телефонTextBox = new System.Windows.Forms.TextBox();
             this.элетронная_почтаTextBox = new System.Windows.Forms.TextBox();
-            this.ролиBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ролиTableAdapter = new WindowsFormsApp1.ProjectArazDataSet1TableAdapters.РолиTableAdapter();
             this.статус_участияTextBox = new System.Windows.Forms.TextBox();
             this.компетенцияTextBox = new System.Windows.Forms.TextBox();
@@ -85,6 +84,7 @@
             this.потребность_в_транспортеTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.ролиBindingSource = new System.Windows.Forms.BindingSource(this.components);
             iD_ПользователиLabel = new System.Windows.Forms.Label();
             логинLabel = new System.Windows.Forms.Label();
             тип_аккаунтаLabel = new System.Windows.Forms.Label();
@@ -199,14 +199,14 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 15);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
             this.bindingNavigatorCountItem.Text = "для {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -214,7 +214,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem
@@ -223,13 +223,13 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -246,7 +246,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
             // пользователи1BindingNavigatorSaveItem
@@ -254,7 +254,7 @@
             this.пользователи1BindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.пользователи1BindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("пользователи1BindingNavigatorSaveItem.Image")));
             this.пользователи1BindingNavigatorSaveItem.Name = "пользователи1BindingNavigatorSaveItem";
-            this.пользователи1BindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.пользователи1BindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.пользователи1BindingNavigatorSaveItem.Text = "Сохранить данные";
             this.пользователи1BindingNavigatorSaveItem.Click += new System.EventHandler(this.пользователи1BindingNavigatorSaveItem_Click);
             // 
@@ -428,11 +428,6 @@
             this.элетронная_почтаTextBox.Size = new System.Drawing.Size(347, 20);
             this.элетронная_почтаTextBox.TabIndex = 20;
             // 
-            // ролиBindingSource
-            // 
-            this.ролиBindingSource.DataMember = "FK_Роли_Пользователи1";
-            this.ролиBindingSource.DataSource = this.пользователи1BindingSource;
-            // 
             // ролиTableAdapter
             // 
             this.ролиTableAdapter.ClearBeforeFill = true;
@@ -575,6 +570,12 @@
             this.button1.TabIndex = 36;
             this.button1.Text = "Выход";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // ролиBindingSource
+            // 
+            this.ролиBindingSource.DataMember = "FK_Роли_Пользователи1";
+            this.ролиBindingSource.DataSource = this.пользователи1BindingSource;
             // 
             // Form4
             // 

@@ -27,6 +27,10 @@ namespace WindowsFormsApp1
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "projectArazDataSet1.Статус_участия". При необходимости она может быть перемещена или удалена.
+            this.статус_участияTableAdapter.Fill(this.projectArazDataSet1.Статус_участия);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "projectArazDataSet1.Компетенция". При необходимости она может быть перемещена или удалена.
+            this.компетенцияTableAdapter.Fill(this.projectArazDataSet1.Компетенция);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "projectArazDataSet1.Регион". При необходимости она может быть перемещена или удалена.
             this.регионTableAdapter.Fill(this.projectArazDataSet1.Регион);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "projectArazDataSet1.Пользователи1". При необходимости она может быть перемещена или удалена.

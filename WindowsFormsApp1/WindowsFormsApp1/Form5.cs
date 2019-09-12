@@ -33,5 +33,52 @@ namespace WindowsFormsApp1
             this.пользователи1TableAdapter.Fill(this.projectArazDataSet1.Пользователи1);
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            пользователи1BindingSource.MoveFirst();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            пользователи1BindingSource.MoveLast();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            пользователи1BindingSource.MovePrevious();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            пользователи1BindingSource.MoveNext();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            пользователи1BindingSource.AddNew();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            пользователи1BindingSource.RemoveCurrent();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.пользователи1BindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.projectArazDataSet1);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -66,22 +66,12 @@
             this.логинTextBox = new System.Windows.Forms.TextBox();
             this.парольTextBox = new System.Windows.Forms.TextBox();
             this.фИОTextBox = new System.Windows.Forms.TextBox();
-            this.регионTextBox = new System.Windows.Forms.TextBox();
             this.городTextBox = new System.Windows.Forms.TextBox();
             this.ролиTableAdapter = new WindowsFormsApp1.ProjectArazDataSetTableAdapters.РолиTableAdapter();
             this.projectArazDataSet1 = new WindowsFormsApp1.ProjectArazDataSet1();
             this.пользователи1BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.пользователи1TableAdapter1 = new WindowsFormsApp1.ProjectArazDataSet1TableAdapters.Пользователи1TableAdapter();
-            this.почтовый_индексTextBox = new System.Windows.Forms.TextBox();
             this.адресTextBox = new System.Windows.Forms.TextBox();
-            this.элетронная_почтаTextBox = new System.Windows.Forms.TextBox();
-            this.компетенцияTextBox = new System.Windows.Forms.TextBox();
-            this.статус_участияTextBox = new System.Windows.Forms.TextBox();
-            this.дата_поступления_заявкиTextBox = new System.Windows.Forms.TextBox();
-            this.дата_приездаTextBox = new System.Windows.Forms.TextBox();
-            this.дата_отъездаTextBox = new System.Windows.Forms.TextBox();
-            this.потребность_в_гостиницеTextBox = new System.Windows.Forms.TextBox();
-            this.потребность_в_транспортеTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.fKРолиПользователи1BindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -89,6 +79,19 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.регионBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.регионTableAdapter = new WindowsFormsApp1.ProjectArazDataSet1TableAdapters.РегионTableAdapter();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.компетенцияBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.компетенцияTableAdapter = new WindowsFormsApp1.ProjectArazDataSet1TableAdapters.КомпетенцияTableAdapter();
+            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.статусучастияBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.статус_участияTableAdapter = new WindowsFormsApp1.ProjectArazDataSet1TableAdapters.Статус_участияTableAdapter();
+            this.listBox4 = new System.Windows.Forms.ListBox();
+            this.listBox5 = new System.Windows.Forms.ListBox();
+            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox6 = new System.Windows.Forms.MaskedTextBox();
             логинLabel = new System.Windows.Forms.Label();
             парольLabel = new System.Windows.Forms.Label();
             фИОLabel = new System.Windows.Forms.Label();
@@ -113,6 +116,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.пользователи1BindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKРолиПользователи1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.регионBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.компетенцияBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.статусучастияBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // projectArazDataSet
@@ -166,7 +171,7 @@
             this.пользователи1BindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.пользователи1BindingNavigator.Name = "пользователи1BindingNavigator";
             this.пользователи1BindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.пользователи1BindingNavigator.Size = new System.Drawing.Size(844, 25);
+            this.пользователи1BindingNavigator.Size = new System.Drawing.Size(500, 25);
             this.пользователи1BindingNavigator.TabIndex = 0;
             this.пользователи1BindingNavigator.Text = "bindingNavigator1";
             // 
@@ -267,7 +272,7 @@
             // логинLabel
             // 
             логинLabel.AutoSize = true;
-            логинLabel.Location = new System.Drawing.Point(63, 86);
+            логинLabel.Location = new System.Drawing.Point(65, 73);
             логинLabel.Name = "логинLabel";
             логинLabel.Size = new System.Drawing.Size(41, 13);
             логинLabel.TabIndex = 1;
@@ -276,7 +281,7 @@
             // логинTextBox
             // 
             this.логинTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пользователи1BindingSource, "Логин", true));
-            this.логинTextBox.Location = new System.Drawing.Point(240, 83);
+            this.логинTextBox.Location = new System.Drawing.Point(242, 70);
             this.логинTextBox.Name = "логинTextBox";
             this.логинTextBox.Size = new System.Drawing.Size(188, 20);
             this.логинTextBox.TabIndex = 2;
@@ -284,7 +289,7 @@
             // парольLabel
             // 
             парольLabel.AutoSize = true;
-            парольLabel.Location = new System.Drawing.Point(63, 112);
+            парольLabel.Location = new System.Drawing.Point(65, 99);
             парольLabel.Name = "парольLabel";
             парольLabel.Size = new System.Drawing.Size(48, 13);
             парольLabel.TabIndex = 3;
@@ -293,7 +298,7 @@
             // парольTextBox
             // 
             this.парольTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пользователи1BindingSource, "Пароль", true));
-            this.парольTextBox.Location = new System.Drawing.Point(240, 109);
+            this.парольTextBox.Location = new System.Drawing.Point(242, 96);
             this.парольTextBox.Name = "парольTextBox";
             this.парольTextBox.Size = new System.Drawing.Size(188, 20);
             this.парольTextBox.TabIndex = 4;
@@ -301,7 +306,7 @@
             // фИОLabel
             // 
             фИОLabel.AutoSize = true;
-            фИОLabel.Location = new System.Drawing.Point(63, 138);
+            фИОLabel.Location = new System.Drawing.Point(65, 125);
             фИОLabel.Name = "фИОLabel";
             фИОLabel.Size = new System.Drawing.Size(37, 13);
             фИОLabel.TabIndex = 5;
@@ -310,7 +315,7 @@
             // фИОTextBox
             // 
             this.фИОTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пользователи1BindingSource, "ФИО", true));
-            this.фИОTextBox.Location = new System.Drawing.Point(240, 135);
+            this.фИОTextBox.Location = new System.Drawing.Point(242, 122);
             this.фИОTextBox.Name = "фИОTextBox";
             this.фИОTextBox.Size = new System.Drawing.Size(188, 20);
             this.фИОTextBox.TabIndex = 6;
@@ -318,24 +323,16 @@
             // регионLabel
             // 
             регионLabel.AutoSize = true;
-            регионLabel.Location = new System.Drawing.Point(63, 164);
+            регионLabel.Location = new System.Drawing.Point(65, 148);
             регионLabel.Name = "регионLabel";
             регионLabel.Size = new System.Drawing.Size(46, 13);
             регионLabel.TabIndex = 7;
             регионLabel.Text = "Регион:";
             // 
-            // регионTextBox
-            // 
-            this.регионTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пользователи1BindingSource, "Регион", true));
-            this.регионTextBox.Location = new System.Drawing.Point(240, 161);
-            this.регионTextBox.Name = "регионTextBox";
-            this.регионTextBox.Size = new System.Drawing.Size(188, 20);
-            this.регионTextBox.TabIndex = 8;
-            // 
             // городLabel
             // 
             городLabel.AutoSize = true;
-            городLabel.Location = new System.Drawing.Point(64, 190);
+            городLabel.Location = new System.Drawing.Point(66, 185);
             городLabel.Name = "городLabel";
             городLabel.Size = new System.Drawing.Size(40, 13);
             городLabel.TabIndex = 9;
@@ -344,7 +341,7 @@
             // городTextBox
             // 
             this.городTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пользователи1BindingSource, "Город", true));
-            this.городTextBox.Location = new System.Drawing.Point(240, 187);
+            this.городTextBox.Location = new System.Drawing.Point(242, 182);
             this.городTextBox.Name = "городTextBox";
             this.городTextBox.Size = new System.Drawing.Size(188, 20);
             this.городTextBox.TabIndex = 10;
@@ -370,24 +367,16 @@
             // почтовый_индексLabel
             // 
             почтовый_индексLabel.AutoSize = true;
-            почтовый_индексLabel.Location = new System.Drawing.Point(64, 216);
+            почтовый_индексLabel.Location = new System.Drawing.Point(66, 211);
             почтовый_индексLabel.Name = "почтовый_индексLabel";
             почтовый_индексLabel.Size = new System.Drawing.Size(99, 13);
             почтовый_индексLabel.TabIndex = 11;
             почтовый_индексLabel.Text = "Почтовый индекс:";
             // 
-            // почтовый_индексTextBox
-            // 
-            this.почтовый_индексTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пользователи1BindingSource, "Почтовый_индекс", true));
-            this.почтовый_индексTextBox.Location = new System.Drawing.Point(240, 213);
-            this.почтовый_индексTextBox.Name = "почтовый_индексTextBox";
-            this.почтовый_индексTextBox.Size = new System.Drawing.Size(188, 20);
-            this.почтовый_индексTextBox.TabIndex = 12;
-            // 
             // адресLabel
             // 
             адресLabel.AutoSize = true;
-            адресLabel.Location = new System.Drawing.Point(64, 242);
+            адресLabel.Location = new System.Drawing.Point(66, 237);
             адресLabel.Name = "адресLabel";
             адресLabel.Size = new System.Drawing.Size(41, 13);
             адресLabel.TabIndex = 13;
@@ -396,7 +385,7 @@
             // адресTextBox
             // 
             this.адресTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пользователи1BindingSource, "Адрес", true));
-            this.адресTextBox.Location = new System.Drawing.Point(240, 239);
+            this.адресTextBox.Location = new System.Drawing.Point(242, 234);
             this.адресTextBox.Name = "адресTextBox";
             this.адресTextBox.Size = new System.Drawing.Size(188, 20);
             this.адресTextBox.TabIndex = 14;
@@ -404,7 +393,7 @@
             // телефонLabel
             // 
             телефонLabel.AutoSize = true;
-            телефонLabel.Location = new System.Drawing.Point(64, 268);
+            телефонLabel.Location = new System.Drawing.Point(66, 263);
             телефонLabel.Name = "телефонLabel";
             телефонLabel.Size = new System.Drawing.Size(55, 13);
             телефонLabel.TabIndex = 15;
@@ -413,144 +402,80 @@
             // элетронная_почтаLabel
             // 
             элетронная_почтаLabel.AutoSize = true;
-            элетронная_почтаLabel.Location = new System.Drawing.Point(64, 294);
+            элетронная_почтаLabel.Location = new System.Drawing.Point(66, 289);
             элетронная_почтаLabel.Name = "элетронная_почтаLabel";
             элетронная_почтаLabel.Size = new System.Drawing.Size(101, 13);
             элетронная_почтаLabel.TabIndex = 17;
             элетронная_почтаLabel.Text = "Элетронная почта:";
             // 
-            // элетронная_почтаTextBox
-            // 
-            this.элетронная_почтаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пользователи1BindingSource, "Элетронная_почта", true));
-            this.элетронная_почтаTextBox.Location = new System.Drawing.Point(240, 291);
-            this.элетронная_почтаTextBox.Name = "элетронная_почтаTextBox";
-            this.элетронная_почтаTextBox.Size = new System.Drawing.Size(188, 20);
-            this.элетронная_почтаTextBox.TabIndex = 18;
-            // 
             // компетенцияLabel
             // 
             компетенцияLabel.AutoSize = true;
-            компетенцияLabel.Location = new System.Drawing.Point(64, 320);
+            компетенцияLabel.Location = new System.Drawing.Point(65, 329);
             компетенцияLabel.Name = "компетенцияLabel";
             компетенцияLabel.Size = new System.Drawing.Size(78, 13);
             компетенцияLabel.TabIndex = 19;
             компетенцияLabel.Text = "Компетенция:";
             // 
-            // компетенцияTextBox
-            // 
-            this.компетенцияTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fKРолиПользователи1BindingSource, "Компетенция", true));
-            this.компетенцияTextBox.Location = new System.Drawing.Point(240, 317);
-            this.компетенцияTextBox.Name = "компетенцияTextBox";
-            this.компетенцияTextBox.Size = new System.Drawing.Size(188, 20);
-            this.компетенцияTextBox.TabIndex = 20;
-            // 
             // статус_участияLabel
             // 
             статус_участияLabel.AutoSize = true;
-            статус_участияLabel.Location = new System.Drawing.Point(64, 346);
+            статус_участияLabel.Location = new System.Drawing.Point(66, 352);
             статус_участияLabel.Name = "статус_участияLabel";
             статус_участияLabel.Size = new System.Drawing.Size(86, 13);
             статус_участияLabel.TabIndex = 21;
             статус_участияLabel.Text = "Статус участия:";
             // 
-            // статус_участияTextBox
-            // 
-            this.статус_участияTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fKРолиПользователи1BindingSource, "Статус_участия", true));
-            this.статус_участияTextBox.Location = new System.Drawing.Point(240, 343);
-            this.статус_участияTextBox.Name = "статус_участияTextBox";
-            this.статус_участияTextBox.Size = new System.Drawing.Size(188, 20);
-            this.статус_участияTextBox.TabIndex = 22;
-            // 
             // дата_поступления_заявкиLabel
             // 
             дата_поступления_заявкиLabel.AutoSize = true;
-            дата_поступления_заявкиLabel.Location = new System.Drawing.Point(64, 372);
+            дата_поступления_заявкиLabel.Location = new System.Drawing.Point(66, 387);
             дата_поступления_заявкиLabel.Name = "дата_поступления_заявкиLabel";
             дата_поступления_заявкиLabel.Size = new System.Drawing.Size(145, 13);
             дата_поступления_заявкиLabel.TabIndex = 23;
             дата_поступления_заявкиLabel.Text = "Дата поступления заявки]:";
             // 
-            // дата_поступления_заявкиTextBox
-            // 
-            this.дата_поступления_заявкиTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fKРолиПользователи1BindingSource, "Дата_поступления_заявки]", true));
-            this.дата_поступления_заявкиTextBox.Location = new System.Drawing.Point(240, 369);
-            this.дата_поступления_заявкиTextBox.Name = "дата_поступления_заявкиTextBox";
-            this.дата_поступления_заявкиTextBox.Size = new System.Drawing.Size(188, 20);
-            this.дата_поступления_заявкиTextBox.TabIndex = 24;
-            // 
             // дата_приездаLabel
             // 
             дата_приездаLabel.AutoSize = true;
-            дата_приездаLabel.Location = new System.Drawing.Point(64, 398);
+            дата_приездаLabel.Location = new System.Drawing.Point(66, 413);
             дата_приездаLabel.Name = "дата_приездаLabel";
             дата_приездаLabel.Size = new System.Drawing.Size(81, 13);
             дата_приездаLabel.TabIndex = 25;
             дата_приездаLabel.Text = "Дата приезда:";
             // 
-            // дата_приездаTextBox
-            // 
-            this.дата_приездаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fKРолиПользователи1BindingSource, "Дата_приезда", true));
-            this.дата_приездаTextBox.Location = new System.Drawing.Point(240, 395);
-            this.дата_приездаTextBox.Name = "дата_приездаTextBox";
-            this.дата_приездаTextBox.Size = new System.Drawing.Size(188, 20);
-            this.дата_приездаTextBox.TabIndex = 26;
-            // 
             // дата_отъездаLabel
             // 
             дата_отъездаLabel.AutoSize = true;
-            дата_отъездаLabel.Location = new System.Drawing.Point(63, 424);
+            дата_отъездаLabel.Location = new System.Drawing.Point(65, 439);
             дата_отъездаLabel.Name = "дата_отъездаLabel";
             дата_отъездаLabel.Size = new System.Drawing.Size(81, 13);
             дата_отъездаLabel.TabIndex = 27;
             дата_отъездаLabel.Text = "Дата отъезда:";
             // 
-            // дата_отъездаTextBox
-            // 
-            this.дата_отъездаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fKРолиПользователи1BindingSource, "Дата_отъезда", true));
-            this.дата_отъездаTextBox.Location = new System.Drawing.Point(240, 421);
-            this.дата_отъездаTextBox.Name = "дата_отъездаTextBox";
-            this.дата_отъездаTextBox.Size = new System.Drawing.Size(188, 20);
-            this.дата_отъездаTextBox.TabIndex = 28;
-            // 
             // потребность_в_гостиницеLabel
             // 
             потребность_в_гостиницеLabel.AutoSize = true;
-            потребность_в_гостиницеLabel.Location = new System.Drawing.Point(63, 450);
+            потребность_в_гостиницеLabel.Location = new System.Drawing.Point(65, 479);
             потребность_в_гостиницеLabel.Name = "потребность_в_гостиницеLabel";
             потребность_в_гостиницеLabel.Size = new System.Drawing.Size(140, 13);
             потребность_в_гостиницеLabel.TabIndex = 29;
             потребность_в_гостиницеLabel.Text = "Потребность в гостинице:";
             // 
-            // потребность_в_гостиницеTextBox
-            // 
-            this.потребность_в_гостиницеTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fKРолиПользователи1BindingSource, "Потребность_в_гостинице", true));
-            this.потребность_в_гостиницеTextBox.Location = new System.Drawing.Point(240, 447);
-            this.потребность_в_гостиницеTextBox.Name = "потребность_в_гостиницеTextBox";
-            this.потребность_в_гостиницеTextBox.Size = new System.Drawing.Size(188, 20);
-            this.потребность_в_гостиницеTextBox.TabIndex = 30;
-            // 
             // потребность_в_транспортеLabel
             // 
             потребность_в_транспортеLabel.AutoSize = true;
-            потребность_в_транспортеLabel.Location = new System.Drawing.Point(63, 476);
+            потребность_в_транспортеLabel.Location = new System.Drawing.Point(65, 515);
             потребность_в_транспортеLabel.Name = "потребность_в_транспортеLabel";
             потребность_в_транспортеLabel.Size = new System.Drawing.Size(146, 13);
             потребность_в_транспортеLabel.TabIndex = 31;
             потребность_в_транспортеLabel.Text = "Потребность в транспорте:";
             // 
-            // потребность_в_транспортеTextBox
-            // 
-            this.потребность_в_транспортеTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fKРолиПользователи1BindingSource, "Потребность_в_транспорте", true));
-            this.потребность_в_транспортеTextBox.Location = new System.Drawing.Point(240, 473);
-            this.потребность_в_транспортеTextBox.Name = "потребность_в_транспортеTextBox";
-            this.потребность_в_транспортеTextBox.Size = new System.Drawing.Size(188, 20);
-            this.потребность_в_транспортеTextBox.TabIndex = 32;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(170, 35);
+            this.label1.Location = new System.Drawing.Point(159, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(149, 25);
             this.label1.TabIndex = 33;
@@ -559,7 +484,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(146, 516);
+            this.button1.Location = new System.Drawing.Point(144, 534);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(191, 36);
             this.button1.TabIndex = 34;
@@ -574,7 +499,7 @@
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(240, 265);
+            this.maskedTextBox1.Location = new System.Drawing.Point(242, 260);
             this.maskedTextBox1.Mask = "+7 (000) 000 0000";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(188, 20);
@@ -586,9 +511,9 @@
             this.listBox1.DataSource = this.регионBindingSource;
             this.listBox1.DisplayMember = "Регион";
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(483, 161);
+            this.listBox1.Location = new System.Drawing.Point(242, 148);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(156, 30);
+            this.listBox1.Size = new System.Drawing.Size(188, 30);
             this.listBox1.TabIndex = 36;
             this.listBox1.ValueMember = "ID_Регион";
             // 
@@ -601,40 +526,143 @@
             // 
             this.регионTableAdapter.ClearBeforeFill = true;
             // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Location = new System.Drawing.Point(242, 208);
+            this.maskedTextBox2.Mask = "000000";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(188, 20);
+            this.maskedTextBox2.TabIndex = 37;
+            // 
+            // maskedTextBox3
+            // 
+            this.maskedTextBox3.Location = new System.Drawing.Point(242, 286);
+            this.maskedTextBox3.Mask = "________________@__________.ru";
+            this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.Size = new System.Drawing.Size(188, 20);
+            this.maskedTextBox3.TabIndex = 38;
+            // 
+            // listBox2
+            // 
+            this.listBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.компетенцияBindingSource, "Компетенция", true));
+            this.listBox2.DataSource = this.компетенцияBindingSource;
+            this.listBox2.DisplayMember = "Компетенция";
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(242, 312);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(188, 30);
+            this.listBox2.TabIndex = 39;
+            this.listBox2.ValueMember = "ID_Компетенции";
+            // 
+            // компетенцияBindingSource
+            // 
+            this.компетенцияBindingSource.DataMember = "Компетенция";
+            this.компетенцияBindingSource.DataSource = this.projectArazDataSet1;
+            // 
+            // компетенцияTableAdapter
+            // 
+            this.компетенцияTableAdapter.ClearBeforeFill = true;
+            // 
+            // listBox3
+            // 
+            this.listBox3.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.статусучастияBindingSource, "Статус_участия", true));
+            this.listBox3.DataSource = this.статусучастияBindingSource;
+            this.listBox3.DisplayMember = "Статус_участия";
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.Location = new System.Drawing.Point(242, 348);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(188, 30);
+            this.listBox3.TabIndex = 40;
+            this.listBox3.ValueMember = "ID_Участия";
+            // 
+            // статусучастияBindingSource
+            // 
+            this.статусучастияBindingSource.DataMember = "Статус_участия";
+            this.статусучастияBindingSource.DataSource = this.projectArazDataSet1;
+            // 
+            // статус_участияTableAdapter
+            // 
+            this.статус_участияTableAdapter.ClearBeforeFill = true;
+            // 
+            // listBox4
+            // 
+            this.listBox4.FormattingEnabled = true;
+            this.listBox4.Items.AddRange(new object[] {
+            "Да",
+            "Нет"});
+            this.listBox4.Location = new System.Drawing.Point(242, 462);
+            this.listBox4.Name = "listBox4";
+            this.listBox4.Size = new System.Drawing.Size(188, 30);
+            this.listBox4.TabIndex = 41;
+            // 
+            // listBox5
+            // 
+            this.listBox5.FormattingEnabled = true;
+            this.listBox5.Items.AddRange(new object[] {
+            "Да",
+            "Нет"});
+            this.listBox5.Location = new System.Drawing.Point(242, 498);
+            this.listBox5.Name = "listBox5";
+            this.listBox5.Size = new System.Drawing.Size(188, 30);
+            this.listBox5.TabIndex = 42;
+            // 
+            // maskedTextBox4
+            // 
+            this.maskedTextBox4.Location = new System.Drawing.Point(242, 384);
+            this.maskedTextBox4.Mask = "00.00.0000 г.";
+            this.maskedTextBox4.Name = "maskedTextBox4";
+            this.maskedTextBox4.Size = new System.Drawing.Size(188, 20);
+            this.maskedTextBox4.TabIndex = 43;
+            // 
+            // maskedTextBox5
+            // 
+            this.maskedTextBox5.Location = new System.Drawing.Point(242, 436);
+            this.maskedTextBox5.Mask = "00.00.0000 г.";
+            this.maskedTextBox5.Name = "maskedTextBox5";
+            this.maskedTextBox5.Size = new System.Drawing.Size(188, 20);
+            this.maskedTextBox5.TabIndex = 44;
+            // 
+            // maskedTextBox6
+            // 
+            this.maskedTextBox6.Location = new System.Drawing.Point(242, 410);
+            this.maskedTextBox6.Mask = "00.00.0000 г.";
+            this.maskedTextBox6.Name = "maskedTextBox6";
+            this.maskedTextBox6.Size = new System.Drawing.Size(188, 20);
+            this.maskedTextBox6.TabIndex = 45;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(844, 575);
+            this.ClientSize = new System.Drawing.Size(500, 578);
+            this.Controls.Add(this.maskedTextBox6);
+            this.Controls.Add(this.maskedTextBox5);
+            this.Controls.Add(this.maskedTextBox4);
+            this.Controls.Add(this.listBox5);
+            this.Controls.Add(this.listBox4);
+            this.Controls.Add(this.listBox3);
+            this.Controls.Add(this.listBox2);
+            this.Controls.Add(this.maskedTextBox3);
+            this.Controls.Add(this.maskedTextBox2);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(потребность_в_транспортеLabel);
-            this.Controls.Add(this.потребность_в_транспортеTextBox);
             this.Controls.Add(потребность_в_гостиницеLabel);
-            this.Controls.Add(this.потребность_в_гостиницеTextBox);
             this.Controls.Add(дата_отъездаLabel);
-            this.Controls.Add(this.дата_отъездаTextBox);
             this.Controls.Add(дата_приездаLabel);
-            this.Controls.Add(this.дата_приездаTextBox);
             this.Controls.Add(дата_поступления_заявкиLabel);
-            this.Controls.Add(this.дата_поступления_заявкиTextBox);
             this.Controls.Add(статус_участияLabel);
-            this.Controls.Add(this.статус_участияTextBox);
             this.Controls.Add(компетенцияLabel);
-            this.Controls.Add(this.компетенцияTextBox);
             this.Controls.Add(элетронная_почтаLabel);
-            this.Controls.Add(this.элетронная_почтаTextBox);
             this.Controls.Add(телефонLabel);
             this.Controls.Add(адресLabel);
             this.Controls.Add(this.адресTextBox);
             this.Controls.Add(почтовый_индексLabel);
-            this.Controls.Add(this.почтовый_индексTextBox);
             this.Controls.Add(городLabel);
             this.Controls.Add(this.городTextBox);
             this.Controls.Add(регионLabel);
-            this.Controls.Add(this.регионTextBox);
             this.Controls.Add(фИОLabel);
             this.Controls.Add(this.фИОTextBox);
             this.Controls.Add(парольLabel);
@@ -654,6 +682,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.пользователи1BindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKРолиПользователи1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.регионBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.компетенцияBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.статусучастияBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -682,27 +712,30 @@
         private System.Windows.Forms.TextBox логинTextBox;
         private System.Windows.Forms.TextBox парольTextBox;
         private System.Windows.Forms.TextBox фИОTextBox;
-        private System.Windows.Forms.TextBox регионTextBox;
         private System.Windows.Forms.TextBox городTextBox;
         private System.Windows.Forms.BindingSource fKРолиПользователи1BindingSource;
         private ProjectArazDataSet1 projectArazDataSet1;
         private System.Windows.Forms.BindingSource пользователи1BindingSource1;
         private ProjectArazDataSet1TableAdapters.Пользователи1TableAdapter пользователи1TableAdapter1;
-        private System.Windows.Forms.TextBox почтовый_индексTextBox;
         private System.Windows.Forms.TextBox адресTextBox;
-        private System.Windows.Forms.TextBox элетронная_почтаTextBox;
-        private System.Windows.Forms.TextBox компетенцияTextBox;
-        private System.Windows.Forms.TextBox статус_участияTextBox;
-        private System.Windows.Forms.TextBox дата_поступления_заявкиTextBox;
-        private System.Windows.Forms.TextBox дата_приездаTextBox;
-        private System.Windows.Forms.TextBox дата_отъездаTextBox;
-        private System.Windows.Forms.TextBox потребность_в_гостиницеTextBox;
-        private System.Windows.Forms.TextBox потребность_в_транспортеTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.BindingSource регионBindingSource;
         private ProjectArazDataSet1TableAdapters.РегионTableAdapter регионTableAdapter;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.BindingSource компетенцияBindingSource;
+        private ProjectArazDataSet1TableAdapters.КомпетенцияTableAdapter компетенцияTableAdapter;
+        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.BindingSource статусучастияBindingSource;
+        private ProjectArazDataSet1TableAdapters.Статус_участияTableAdapter статус_участияTableAdapter;
+        private System.Windows.Forms.ListBox listBox4;
+        private System.Windows.Forms.ListBox listBox5;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox5;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox6;
     }
 }
